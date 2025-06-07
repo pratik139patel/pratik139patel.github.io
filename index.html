@@ -1,5 +1,133 @@
-<html>
-  <body>
-    <h1>Pratik Patel</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event Reservation</title>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            }
+            .container {
+                background: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                max-width: 400px;
+                width: 100%;
+            }
+            .map-container {
+                border-radius: 10px;
+            }
+            h1 {
+                margin-bottom: 20px;
+                font-size: 28px;
+                color: #333;
+                text-align: center;
+                position: relative;
+                padding-bottom: 10px;
+            }
+            h1::after {
+                content: '';
+                width: 80px;
+                height: 3px;
+                background: #8c00ff;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 5px;
+            }
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+                color: #555;
+            }
+            input, select {
+                width: 100%;
+                padding: 10px 0px;
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 16px;
+                -ms-box-sizing:content-box;
+                -moz-box-sizing:content-box;
+                -webkit-box-sizing:content-box; 
+                box-sizing:content-box;
+            }
+            button {
+                width: 100%;
+                padding: 12px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            h2 {
+                text-align: center;
+            }
+            .calendar-link {
+                display: inline-block;
+                margin: 12px 0px;
+                padding: 10px 0px;
+                background-color: #28a745;
+                color: #fff;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+                width: 100%;
+                text-align: center;
+            }
+            .calendar-link:hover {
+                background-color: #218838;
+                cursor: pointer;
+            }
+            .event-details {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Pratik & Disha's Event Reservation</h1>
+            <form action="/submit-reservation" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="quantity">Number of People:</label>
+                <select id="quantity" name="quantity" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit">Reserve</button>
+            </form>
+            <br/>
+            <hr/>
+            <h1>Event Details</h1>
+            <iframe class="map-container" src="https://maps.google.com/maps?&amp;q=Sankalp, 28331 Dodge Dr, Warrenville, IL 60555&amp;output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <p href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Event+Reservation&dates=20250615T180000/20250615T210000&details=Join+us+for+an+exciting+event!&location=28331+Dodge+Dr,+Warrenville,+IL+60555" class="calendar-link" target="_blank">July 5, 2025, 6:00 PM - 9:00 PM</p>
+        </div>
+    </body>
 </html>
